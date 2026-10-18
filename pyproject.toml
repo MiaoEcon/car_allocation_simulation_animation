@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vehicle-status-animation"
+version = "0.2.0"
+description = "Single-station vehicle allocation animation with notebook and HTML playback"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Package Maintainer" }]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+notebook = ["ipython>=8.0", "ipywidgets>=8.0"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/vehicle_status_animation"]
